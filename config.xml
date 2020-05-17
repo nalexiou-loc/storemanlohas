@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+	id="com.lohas.xStore" 
+	version="3.50.60" 
+	android-versionCode="35060"
+	ios-CFBundleVersion="3.50.60"
+	xmlns="http://www.w3.org/ns/widgets" 
+	xmlns:gap="http://phonegap.com/ns/1.0">
+	<name>Lohas Fresh Mart</name>
+	<description>
+		This application allows to navigate and shop items and building shopping lists on the store server.
+	</description>
+	<author email="stephan.mercier@locsoftware.com" href="http://www.locsoftware.com">
+		LOC Team
+	</author>
+
+	<feature name="http://api.phonegap.com/1.0/device" />
+
+	<preference name="phonegap-version" value="cli-9.0.0" />
+	<preference name="permissions" value="none" />
+	<preference name="target-device" value="universal" />
+	<preference name="fullscreen" value="false" />
+	<preference name="webviewbounce" value="true" />
+	<preference name="prerendered-icon" value="true" />
+	<preference name="stay-in-webview" value="false" />
+	<preference name="detect-data-types" value="true" />
+	<preference name="exit-on-suspend" value="false" />
+	<preference name="show-splash-screen-spinner" value="true" />
+	<preference name="auto-hide-splash-screen" value="true" />
+	<preference name="disable-cursor" value="false" />
+	<preference name="android-minSdkVersion" value="19" />
+	<preference name="android-installLocation" value="auto" />
+	<preference name="DisallowOverscroll" value="true" />
+	<preference name="orientation" value="portrait" />
+	<preference name="android-build-tool" value="gradle" />
+	
+	<plugin name="cordova-android-support-gradle-release" spec="1.2.1" />
+	<plugin name="cordova-plugin-statusbar" spec="2.4.2" />
+	<plugin name="cordova-plugin-camera" spec="4.0.2" />
+	<plugin name="cordova-plugin-device" spec="2.0.1" />
+	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
+	<plugin name="cordova-plugin-geolocation" spec="4.0.1" />
+	<plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
+	<plugin name="cordova-plugin-vibration" spec="3.0.1" />
+	<plugin name="cordova-plugin-whitelist" spec="1.3.3" />
+	<plugin name="phonegap-plugin-barcodescanner" spec="7.1.0" />
+	<plugin name="cordova-plugin-inappbrowser" spec="3.0.0" />
+    	<preference name="android-targetSdkVersion" value="28" />
+
+	<!--  used to define a single default icon which will be used for all platforms. -->
+	<icon src="resources/icon.png" />
+	<splash src="resources/splash.png" />
+	
+	<platform name="android">
+		<!--
+			ldpi    : 36x36 px
+			mdpi    : 48x48 px
+			hdpi    : 72x72 px
+			xhdpi   : 96x96 px
+			xxhdpi  : 144x144 px
+			xxxhdpi : 192x192 px
+		-->
+		<icon density="ldpi" src="resources/icons/android/drawable-ldpi-icon.png" />
+		<icon density="mdpi" src="resources/icons/android/drawable-mdpi-icon.png" />
+		<icon density="hdpi" src="resources/icons/android/drawable-hdpi-icon.png" />
+		<icon density="xhdpi" src="resources/icons/android/drawable-xhdpi-icon.png" />
+		<icon density="xxhdpi" src="resources/icons/android/drawable-xxhdpi-icon.png" />
+		<icon density="xxxhdpi" src="resources/icons/android/drawable-xxxhdpi-icon.png" />
+		
+		<!-- you can use any density that exists in the Android project -->
+		<splash density="land-ldpi" src="resources/screens/android/drawable-land-ldpi-screen.png" />
+		<splash density="land-mdpi" src="resources/screens/android/drawable-land-mdpi-screen.png" />
+		<splash density="land-hdpi" src="resources/screens/android/drawable-land-hdpi-screen.png" />
+		<splash density="land-xhdpi" src="resources/screens/android/drawable-land-xhdpi-screen.png" />
+		<splash density="land-xxhdpi" src="resources/screens/android/drawable-land-xxhdpi-screen.png" />
+		<splash density="land-xxxhdpi" src="resources/screens/android/drawable-land-xxxhdpi-screen.png" />
+		
+		<splash density="port-ldpi" src="resources/screens/android/drawable-port-ldpi-screen.png" />
+		<splash density="port-mdpi" src="resources/screens/android/drawable-port-mdpi-screen.png" />
+		<splash density="port-hdpi" src="resources/screens/android/drawable-port-hdpi-screen.png" />
+		<splash density="port-xhdpi" src="resources/screens/android/drawable-port-xhdpi-screen.png" />
+		<splash density="port-xxhdpi" src="resources/screens/android/drawable-port-xxhdpi-screen.png" />
+		<splash density="port-xxxhdpi" src="resources/screens/android/drawable-port-xxxhdpi-screen.png" />
+	</platform>
+
+	<platform name="ios">
+
+		<edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+			<string>This allows uploading pictures from photo library and sharing it with the store.</string>
+		</edit-config>
+		<edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+			<string>This allows using the camera to scan barcodes to open the product details page and/or scan a customer card.</string>
+		</edit-config>
+		<edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+			<string>This allows the app to use geolocation to find stores nearby.</string>
+		</edit-config>
+		<edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
+			<string>This allows the app to use geolocation to find stores nearby.</string>
+		</edit-config>
+
+		<!-- iOS 8.0+ -->
+		<!-- iPhone 6 Plus  -->
+		<icon src="resources/icons/ios/icon-60@3x.png" width="180" height="180" />
+		<!-- iOS 7.0+ -->
+		<!-- iPhone / iPod Touch  -->
+		<icon src="resources/icons/ios/icon-60.png" width="60" height="60" />
+		<icon src="resources/icons/ios/icon-60@2x.png" width="120" height="120" />
+		<!-- iPad -->
+		<icon src="resources/icons/ios/icon-76.png" width="76" height="76" />
+		<icon src="resources/icons/ios/icon-76@2x.png" width="152" height="152" />
+		<!-- Spotlight Icon -->
+		<icon src="resources/icons/ios/icon-40.png" width="40" height="40" />
+		<icon src="resources/icons/ios/icon-40@2x.png" width="80" height="80" />
+		<!-- iOS 6.1 -->
+		<!-- iPhone / iPod Touch -->
+		<icon src="resources/icons/ios/icon.png" width="57" height="57" />
+		<icon src="resources/icons/ios/icon@2x.png" width="114" height="114" />
+		<!-- iPad -->
+		<icon src="resources/icons/ios/icon-72.png" width="72" height="72" />
+		<icon src="resources/icons/ios/icon-72@2x.png" width="144" height="144" />
+		<!-- iPhone Spotlight and Settings Icon -->
+		<icon src="resources/icons/ios/icon-small.png" width="29" height="29" />
+		<icon src="resources/icons/ios/icon-small@2x.png" width="58" height="58" />
+		<icon src="resources/icons/ios/icon-small@3x.png" width="87" height="87" />
+		<!-- iPad Spotlight and Settings Icon -->
+		<icon src="resources/icons/ios/icon-50.png" width="50" height="50" />
+		<icon src="resources/icons/ios/icon-50@2x.png" width="100" height="100" />
+		<!-- iPad Pro -->
+		<icon src="resources/icons/ios/icon-83.5@2x.png" width="167" height="167" />
+		
+		<!-- Storyboard method (supports all devices):
+			Important: If you use the storyboard method, legacy images are copied but ignored.
+			Note: images are determined by scale, idiom, and size traits. The following
+			are suggested based on current device form factors -->		
+		<splash src="resources/screens/ios/Default@2x~universal~anyany.png" />
+		<!--
+		<splash src="resources/screens/ios/Default@2x~universal~comany.png" />
+		<splash src="resources/screens/ios/Default@2x~universal~comcom.png" />
+		<splash src="resources/screens/ios/Default@3x~universal~anyany.png" />
+		<splash src="resources/screens/ios/Default@3x~universal~anycom.png" />
+		<splash src="resources/screens/ios/Default@3x~universal~comany.png" />
+		-->
+		
+	</platform>
+
+	<!-- Configuration using MRT concept (Recommended, see "Windows-specific information" section for details): -->
+	<!--
+	<platform name="windows">
+		<icon src="resources/windows/storelogo.png" target="StoreLogo" />
+		<icon src="resources/windows/smalllogo.png" target="Square30x30Logo" />
+		<icon src="resources/windows/Square44x44Logo.png" target="Square44x44Logo" />
+		<icon src="resources/windows/Square70x70Logo.png" target="Square70x70Logo" />
+		<icon src="resources/windows/Square71x71Logo.png" target="Square71x71Logo" />
+		<icon src="resources/windows/Square150x150Logo.png" target="Square150x150Logo" />
+		<icon src="resources/windows/Square310x310Logo.png" target="Square310x310Logo" />
+		<icon src="resources/windows/Wide310x150Logo.png" target="Wide310x150Logo" />
+		
+		<splash src="resources/screens/windows/splashscreen.png" target="SplashScreen"/>
+		<splash src="resources/screens/windows/splashscreenphone.png" target="SplashScreenPhone"/>
+	</platform>
+	-->
+
+	<access origin="*" />
+	<allow-intent href="*" />
+	<allow-navigation href="*" />
+
+</widget>
